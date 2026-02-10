@@ -1,0 +1,5 @@
+{
+  "name": "PSU IPCR System-Non Teaching",
+  "description": "Individual Performance Commitment and Review system for Partido State University Non-Teaching Personnel, featuring automated rating computations, evidence management, and RBAC workflows.",
+  "requestFramePermissions": []
+}
