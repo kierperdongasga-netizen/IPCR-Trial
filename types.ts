@@ -70,7 +70,12 @@ export interface IPCRData {
   
   comments: string;
   
-  // Signatures
+  // Signatories
+  supervisorName?: string;
+  supervisorPosition?: string;
+  approverName?: string;
+  approverPosition?: string;
+
   rateeSignedAt?: string;
   supervisorSignedAt?: string;
   approverSignedAt?: string;

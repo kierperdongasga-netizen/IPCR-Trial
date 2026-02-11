@@ -353,21 +353,57 @@ export const IPCREditor: React.FC<Props> = ({ data, onChange, readOnly, userRole
 
         {/* Signatories - Visual Only */}
         <div className="mt-12 grid grid-cols-3 gap-8 text-center text-sm break-inside-avoid">
+           {/* Ratee */}
            <div className="bg-white/30 p-4 rounded-lg border border-white/20">
              <p className="mb-8 font-bold text-slate-700 uppercase tracking-wide">Ratee</p>
-             <div className="border-b-2 border-slate-400 mb-2 font-handwriting text-lg text-blue-900">{currentUser ? currentUser.name : '__________________'}</div>
+             <div className="border-b-2 border-slate-400 mb-1 font-bold text-lg text-blue-900">{currentUser ? currentUser.name : '__________________'}</div>
+             <div className="border-b border-slate-300 mb-2 pb-1 font-medium text-slate-800 text-xs uppercase">{currentUser?.position || 'N/A'}</div>
              <p className="text-xs text-slate-500 font-semibold">Signature over Printed Name</p>
              <p className="text-xs text-slate-400 mt-1 font-medium">Date: {new Date().toLocaleDateString()}</p>
            </div>
+
+           {/* Immediate Supervisor */}
            <div className="bg-white/30 p-4 rounded-lg border border-white/20">
              <p className="mb-8 font-bold text-slate-700 uppercase tracking-wide">Immediate Supervisor</p>
-             <div className="border-b-2 border-slate-400 mb-2 font-handwriting text-lg text-blue-900">Dir. Maria Santos</div>
+             <input
+                type="text"
+                className="w-full text-center border-b-2 border-slate-400 bg-transparent mb-1 font-bold text-lg text-blue-900 focus:outline-none focus:border-blue-500 placeholder-slate-400"
+                placeholder="Name of Supervisor"
+                value={data.supervisorName || ''}
+                onChange={(e) => onChange({...data, supervisorName: e.target.value})}
+                disabled={readOnly}
+             />
+             <input
+                type="text"
+                className="w-full text-center border-b border-slate-300 bg-transparent mb-2 pb-1 font-medium text-slate-800 text-xs uppercase focus:outline-none focus:border-blue-500 placeholder-slate-400"
+                placeholder="Position / Designation"
+                value={data.supervisorPosition || ''}
+                onChange={(e) => onChange({...data, supervisorPosition: e.target.value})}
+                disabled={readOnly}
+             />
              <p className="text-xs text-slate-500 font-semibold">Signature over Printed Name</p>
              <p className="text-xs text-slate-400 mt-1 font-medium">Date: _____________</p>
            </div>
+
+           {/* Approver */}
            <div className="bg-white/30 p-4 rounded-lg border border-white/20">
-             <p className="mb-8 font-bold text-slate-700 uppercase tracking-wide">Approved By (VP/Pres)</p>
-             <div className="border-b-2 border-slate-400 mb-2 font-handwriting text-lg text-blue-900">VP Roberto Garcia</div>
+             <p className="mb-8 font-bold text-slate-700 uppercase tracking-wide">Approved By</p>
+             <input
+                type="text"
+                className="w-full text-center border-b-2 border-slate-400 bg-transparent mb-1 font-bold text-lg text-blue-900 focus:outline-none focus:border-blue-500 placeholder-slate-400"
+                placeholder="Name of Approver"
+                value={data.approverName || ''}
+                onChange={(e) => onChange({...data, approverName: e.target.value})}
+                disabled={readOnly}
+             />
+             <input
+                type="text"
+                className="w-full text-center border-b border-slate-300 bg-transparent mb-2 pb-1 font-medium text-slate-800 text-xs uppercase focus:outline-none focus:border-blue-500 placeholder-slate-400"
+                placeholder="Position / Designation"
+                value={data.approverPosition || ''}
+                onChange={(e) => onChange({...data, approverPosition: e.target.value})}
+                disabled={readOnly}
+             />
              <p className="text-xs text-slate-500 font-semibold">Signature over Printed Name</p>
              <p className="text-xs text-slate-400 mt-1 font-medium">Date: _____________</p>
            </div>
