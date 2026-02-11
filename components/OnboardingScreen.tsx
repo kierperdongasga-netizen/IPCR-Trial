@@ -31,7 +31,7 @@ export const OnboardingScreen: React.FC<Props> = ({ onComplete, userEmail }) => 
         <form onSubmit={handleSubmit} className="p-8 space-y-6">
           
           <div className="bg-blue-50/80 backdrop-blur-sm border border-blue-200 p-4 rounded-xl text-sm text-blue-900 shadow-sm">
-            <strong>Action Required:</strong> Please select your personnel category to strictly follow the PSU IPCR Guidelines for weight allocation.
+            <strong>Action Required:</strong> Please select your personnel category to strictly follow the ParSU IPCR Guidelines for weight allocation.
           </div>
 
           <div>

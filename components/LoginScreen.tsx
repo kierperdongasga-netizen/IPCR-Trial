@@ -5,11 +5,11 @@ export const LoginScreen = ({ onLogin }: { onLogin: () => void }) => {
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="glass-card p-8 rounded-2xl max-w-md w-full text-center border-t-4 border-t-blue-600">
         <div className="mb-6 flex justify-center">
-           <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg ring-4 ring-white/50">
-             PSU
+           <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg ring-4 ring-white/50">
+             ParSU
            </div>
         </div>
-        <h1 className="text-3xl font-extrabold mb-2 text-slate-900 tracking-tight">Welcome to PSU IPCR</h1>
+        <h1 className="text-3xl font-extrabold mb-2 text-slate-900 tracking-tight">Welcome to ParSU IPCR</h1>
         <p className="text-slate-700 mb-8 font-medium text-base">Performance Commitment and Review System for Non-Teaching Personnel</p>
         
         <button 

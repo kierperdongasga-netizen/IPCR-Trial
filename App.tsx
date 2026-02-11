@@ -172,10 +172,10 @@ const App: React.FC = () => {
       <aside className="w-full md:w-72 glass-dark text-white flex-shrink-0 print:hidden flex flex-col justify-between shadow-2xl z-20">
         <div>
           <div className="p-6 border-b border-white/10 flex items-center gap-3 bg-white/5">
-             <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full w-10 h-10 flex items-center justify-center text-xs font-extrabold shadow-lg ring-2 ring-white/10">PSU</div>
+             <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full w-12 h-12 flex items-center justify-center text-[10px] font-extrabold shadow-lg ring-2 ring-white/10">ParSU</div>
              <div>
                 <h1 className="font-bold tracking-tight text-lg text-white/95">IPCR System</h1>
-                <p className="text-[11px] text-blue-200 font-medium">HR Management</p>
+                <p className="text-[11px] text-blue-200 font-medium">Performance Management</p>
              </div>
           </div>
           
